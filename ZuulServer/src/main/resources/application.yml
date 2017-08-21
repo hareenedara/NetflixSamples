@@ -1,0 +1,19 @@
+
+zuul:
+  routes:
+    hello-service:
+      path: /helloservice/**
+      serviceId: hello-service
+      stripPrefix: false
+      #url: //helloservice/helloservice/
+
+spring:
+  application:
+    name: zuul-proxy
+
+server:
+  port: 8090
+
+ribbon:
+  eureka:
+    enabled: true
